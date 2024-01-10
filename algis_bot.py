@@ -29,7 +29,7 @@ def check_message(chat_id, message):
 
 def magnetic_field_responce(latitude, longitude):
     data = requests.get('https://www.ngdc.noaa.gov/geomag-web/calculators/calculateIgrfwmm',
-                        params={'key': 'EAU2y', 'lat1': latitude, 'lon1': longitude,
+                        params={'key': '******', 'lat1': latitude, 'lon1': longitude,
                                 'model': 'IGRF', 'resultFormat': 'json'}).json()  # делаем запрос магнитных составляющих
     print('Ответ сервера Geomag-web: ', data)
     return data['result'][0]
